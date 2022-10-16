@@ -7,7 +7,7 @@ for _ in 1...3 {
 }
 let str: String = "\(abc)"
 for c in str {
-	arr[Int(c.asciiValue!) - 48] += 1
+	arr[Int(c.asciiValue!) - Int(Character("0").asciiValue!)] += 1
 }
 for i in arr {
 	print(i)
