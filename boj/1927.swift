@@ -58,7 +58,9 @@ struct Heap {
           if heapArr[popedIndex] > heapArr[rightChildIndex] {
             heapArr.swapAt(popedIndex, rightChildIndex)
             popedIndex = rightChildIndex
-          } else {
+          }
+        } else {
+          if heapArr[popedIndex] > heapArr[leftChildIndex] {
             heapArr.swapAt(popedIndex, leftChildIndex)
             popedIndex = leftChildIndex
           }
