@@ -12,22 +12,19 @@ for _ in 0..<line {
   graph[connect[1]].append(connect[0])
 }
 
-// func bfs(node: Int) {
-  var queue: [Int] = [1]
-  var index = 0
-  visited[1] = true
+var queue = [1]
+var index = 0
+visited[1] = true
 
-  while queue.count > index {
-    let currendNode = queue[index]
-    for nextNode in graph[currendNode] {
-      if !visited[nextNode] {
-        visited[nextNode] = true
-        queue.append(nextNode)
-      }
+while queue.count > index {
+  let currendNode = queue[index]
+  for nextNode in graph[currendNode] {
+    if !visited[nextNode] {
+      visited[nextNode] = true
+      queue.append(nextNode)
     }
-    index += 1
   }
-// }
+  index += 1
+}
 
-// bfs(node: 1)
 print(visited.filter { $0 }.count - 1)
