@@ -11,7 +11,7 @@ var map: [[String]] = []
 for _ in 0..<n {
   map.append(readLine()!.map { String($0) })
 }
-print(map)
+
 var start: (x: Int, y: Int) = (0, 0)
 for i in 0..<n {
   for j in 0..<m {
@@ -21,7 +21,7 @@ for i in 0..<n {
     }
   }
 }
-print(start)
+
 var visited: [[Bool]] = Array(repeating: Array(repeating: false, count: m), count: n)
 var count = 0
 
